@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Image Tracking Example</title>
 
-    <script src="./lib/aframe-master.min.js"></script>
-    <script src="./lib/aframe-ar-nft.js"></script>
+    <script src='./lib/aframe-master.min.js'></script>
+    <script src='./lib/aframe-ar-nft.js'></script>
 
     <style>
       .arjs-loader {
@@ -31,19 +31,20 @@
   </head>
 
   <body style="margin: 0px; overflow: hidden;">
+    <!-- minimal loader shown until image descriptors are loaded -->
     <div class="arjs-loader">
       <div>Loading, please wait...</div>
     </div>
     <a-scene
       vr-mode-ui="enabled: false;"
       renderer="logarithmicDepthBuffer: true;"
-        renderer="logarithmicDepthBuffer: true;" 
-      renderer="logarithmicDepthBuffer: true;"
-        renderer="logarithmicDepthBuffer: true;" 
-      renderer="logarithmicDepthBuffer: true;"
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     >
+      <!-- we use cors proxy to avoid cross-origin problems 
+      url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
+      url="https://renecruz.github.io/ar/nft/ctlife"
+      -->
       <a-nft
         type="nft"        
         url="https://alonzok.github.io/cursito_ar/ite/Naomi/Naomi"
